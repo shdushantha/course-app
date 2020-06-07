@@ -55,6 +55,12 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 });
 
+userSchema.virtual('courses', {
+    ref: 'Course',
+    localField: '_id',
+    foreignField: 'instructor'
+});
+
 userSchema.methods.toJSON = function () {
     const user = this;
     const userObject = user.toObject();
