@@ -1,0 +1,29 @@
+{
+  "name": "course-app",
+  "version": "1.0.0",
+  "description": "course app for all node js fundermentals",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
+  },
+  "author": "dushantha",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.18",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
