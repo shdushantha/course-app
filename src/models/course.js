@@ -16,10 +16,10 @@ const courseSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    instructor: {
+    coordinator: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref: 'instructor'
+        ref: 'coordinator'
     }
 });
 

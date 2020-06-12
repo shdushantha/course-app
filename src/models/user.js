@@ -42,6 +42,11 @@ const userSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
+    role: {
+        type: String,
+        require: true,
+        trim: true
+    },
     tokens: [{
         token: {
             type: String,
@@ -57,6 +62,12 @@ const userSchema = new mongoose.Schema({
 
 userSchema.virtual('courses', {
     ref: 'Course',
+    localField: '_id',
+    foreignField: 'coordinator'
+});
+
+userSchema.virtual('subjects', {
+    ref: 'Subject',
     localField: '_id',
     foreignField: 'instructor'
 });
