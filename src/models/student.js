@@ -33,6 +33,11 @@ const studentSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    role: {
+        type: String,
+        require: true,
+        trim: true
+    },
     avatar: {
         type: Buffer
     }

@@ -20,6 +20,11 @@ const subjectSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'instructor'
+    },
+    course:{
+        type: mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref:'course'
     }
 });
 
